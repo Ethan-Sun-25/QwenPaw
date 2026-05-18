@@ -1,0 +1,5 @@
+{
+  "dashscope:qwen3.6-plus": { "input": 0.004, "output": 0.012, "currency": "CNY", "unit_per": 1000 },
+  "dashscope:qwen-turbo":   { "input": 0.0003, "output": 0.0006, "currency": "CNY", "unit_per": 1000 },
+  "openai:gpt-4o":          { "input": 0.005, "output": 0.015, "currency": "USD", "unit_per": 1000 }
+}

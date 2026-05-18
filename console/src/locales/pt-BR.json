@@ -64,7 +64,8 @@
     "debug": "Depuracao",
     "plugins": "Plugins",
     "backups": "Backups",
-    "pluginManager": "Gerenciador de Plugins"
+    "pluginManager": "Gerenciador de Plugins",
+    "opsDashboard": "Ops Monitor"
   },
   "debug": {
     "title": "Depuracao",

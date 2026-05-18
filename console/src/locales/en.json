@@ -31,6 +31,103 @@
     "yes": "Yes",
     "no": "No"
   },
+  "dashboard": {
+    "title": "Operations Dashboard",
+    "new": "NEW",
+    "range": {
+      "today": "Today",
+      "7d": "7 Days",
+      "30d": "30 Days"
+    },
+    "kpi": {
+      "totalSessions": "Total Sessions",
+      "totalTokens": "Total Tokens",
+      "llmCalls": "LLM Calls",
+      "estimatedCost": "Est. Cost",
+      "errorRate": "Error Rate",
+      "avgLatency": "Avg Latency",
+      "activeAgents": "Active Agents",
+      "uptime": "Uptime"
+    },
+    "alert": {
+      "tokenSpike": "Token consumption surged {{pct}}% vs. previous period",
+      "highErrorRate": "Error rate has reached {{rate}}%, please investigate",
+      "budgetWarning": "Budget usage has reached {{pct}}%"
+    },
+    "chart": {
+      "tokensTrend": "Token Consumption Trend",
+      "modelsDistribution": "Model Call Distribution",
+      "topSkills": "Top Skill Calls"
+    },
+    "tab": {
+      "tokens": "Tokens",
+      "conversations": "Conversations",
+      "models": "Models",
+      "skills": "Skills",
+      "mcp": "MCP",
+      "acp": "ACP",
+      "plugins": "Plugins"
+    },
+    "tokens": {
+      "date": "Date",
+      "promptTokens": "Prompt Tokens",
+      "completionTokens": "Completion Tokens",
+      "totalTokens": "Total Tokens",
+      "llmCalls": "LLM Calls",
+      "modelName": "Model",
+      "callCount": "Calls",
+      "pctOfTotal": "% of Total",
+      "estimatedCost": "Est. Cost",
+      "totalPrompt": "Total Prompt",
+      "totalCompletion": "Total Completion",
+      "total": "Total Tokens",
+      "totalCost": "Total Cost",
+      "timelineTitle": "Timeline",
+      "byModelTitle": "By Model"
+    },
+    "conversations": {
+      "agentName": "Agent Name",
+      "sessions": "Sessions",
+      "messages": "Messages",
+      "llmCalls": "LLM Calls",
+      "tokens": "Tokens",
+      "avgTokens": "Avg Tokens/Session",
+      "channelName": "Channel",
+      "totalAgents": "Total Agents",
+      "totalSessions": "Total Sessions",
+      "totalMessages": "Total Messages",
+      "totalLlmCalls": "Total LLM Calls",
+      "byAgent": "By Agent",
+      "byChannel": "By Channel"
+    },
+    "models": {
+      "modelKey": "Model Key",
+      "callCount": "Calls",
+      "totalTokens": "Total Tokens",
+      "avgLatency": "Avg Latency",
+      "successRate": "Success Rate",
+      "pctOfCalls": "% of Calls",
+      "totalProviders": "Providers",
+      "activeModels": "Active Models",
+      "totalCalls": "Total Calls",
+      "detailTitle": "Model Details"
+    },
+    "skills": {
+      "skillName": "Skill Name",
+      "skillType": "Type",
+      "callCount": "Calls",
+      "errorRate": "Error Rate",
+      "avgDuration": "Avg Duration",
+      "totalInstalled": "Installed Skills",
+      "builtin": "Built-in",
+      "custom": "Custom",
+      "topCallsTitle": "Top Calls"
+    },
+    "empty": {
+      "noData": "No data available",
+      "placeholder": "No data yet. Telemetry will be available in a future version."
+    }
+  },
   "chunkError": {
     "title": "Failed to load page",
     "subTitle": "This may be caused by a network issue or an application update.",
@@ -65,7 +162,8 @@
     "debug": "Debug",
     "plugins": "Plugins",
     "backups": "Backups",
-    "pluginManager": "Plugin Manager"
+    "pluginManager": "Plugin Manager",
+    "opsDashboard": "Ops Monitor"
   },
   "debug": {
     "title": "Debug",

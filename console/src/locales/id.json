@@ -63,7 +63,8 @@
     "voiceTranscription": "Transkripsi Suara",
     "debug": "Debug",
     "plugins": "Plugin",
-    "backups": "Cadangan"
+    "backups": "Cadangan",
+    "opsDashboard": "Ops Monitor"
   },
   "header": {
     "changelog": "Changelog",

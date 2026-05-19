@@ -118,11 +118,10 @@ def _sessions_in_range(
 # ═══════════════════════════════════════════════════════════════
 
 _RE_ERROR = re.compile(
-    r"\bERROR\b|failed|exception", re.IGNORECASE
+    r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.*\bERROR\b"
 )
 _RE_REQUEST = re.compile(
-    r"Handle agent query|LLM call|Usage for session",
-    re.IGNORECASE,
+    r"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}"
 )
 _RE_HANDLE_QUERY = re.compile(r"Handle agent query")
 _RE_STREAM_DONE = re.compile(r"console stream done")
@@ -253,10 +252,13 @@ def overview_metrics(
     # K08, K09
     log_s = _log_stats()
     error_rate = round(
-        safe_div(
-            log_s["error_count"], log_s["total_request_count"]
-        )
-        * 100,
+        min(
+            safe_div(
+                log_s["error_count"], log_s["total_request_count"]
+            )
+            * 100,
+            100.0,
+        ),
         1,
     )
     avg_latency_ms = log_s["avg_latency_ms"]

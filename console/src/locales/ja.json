@@ -62,7 +62,8 @@
     "plugins": "プラグイン",
     "acp": "ACP",
     "backups": "バックアップ",
-    "pluginManager": "プラグインマネージャー"
+    "pluginManager": "プラグインマネージャー",
+    "opsDashboard": "運用モニタ"
   },
   "debug": {
     "title": "デバッグ",

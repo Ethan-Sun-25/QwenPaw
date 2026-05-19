@@ -658,6 +658,10 @@ app.include_router(
     tags=["agent"],
 )
 
+# Dashboard analytics router
+from .routers.dashboard import router as dashboard_router  # noqa: E402
+app.include_router(dashboard_router)
+
 # Voice channel: Twilio-facing endpoints at root level (not under /api/).
 # POST /voice/incoming, WS /voice/ws, POST /voice/status-callback
 app.include_router(voice_router, tags=["voice"])

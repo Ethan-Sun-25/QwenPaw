@@ -42,7 +42,7 @@ import {
   SparkSaveLine,
   SparkEmailLine,
 } from "@agentscope-ai/icons";
-import { Package } from "lucide-react";
+import { Package, BarChart3 } from "lucide-react";
 import { clearAuthToken } from "../api/config";
 import { authApi } from "../api/modules/auth";
 import api from "../api";
@@ -362,6 +362,16 @@ export default function Sidebar({ selectedKey }: SidebarProps) {
       path: "/plugin-manager",
       label: t("nav.pluginManager", "Plugin Manager"),
     },
+    {
+      key: "ops-dashboard",
+      icon: (
+        <Badge count={t("dashboard.new")} size="small" offset={[12, -2]}>
+          <BarChart3 size={18} />
+        </Badge>
+      ),
+      path: "/dashboard",
+      label: t("nav.opsDashboard"),
+    },
     // Append plugin nav items dynamically
     ...pluginRoutes.map((route) => ({
       key: route.path.replace(/^\//, ""),
@@ -507,6 +517,21 @@ export default function Sidebar({ selectedKey }: SidebarProps) {
         },
       ],
     },
+    {
+      key: "ops-dashboard-group",
+      label: collapsed ? null : (
+        <Badge count={t("dashboard.new")} size="small" offset={[4, 0]}>
+          <span>{t("nav.opsDashboard")}</span>
+        </Badge>
+      ),
+      children: [
+        {
+          key: "ops-dashboard",
+          label: collapsed ? null : t("nav.opsDashboard"),
+          icon: <BarChart3 size={16} />,
+        },
+      ],
+    },
   ];
 
   // Append plugin menu items as a group (only when there are plugins)
@@ -598,6 +623,7 @@ export default function Sidebar({ selectedKey }: SidebarProps) {
             selectedKeys={[selectedKey]}
             openKeys={[
               ...DEFAULT_OPEN_KEYS,
+              "ops-dashboard-group",
               ...(pluginRoutes.length > 0 ? ["plugins-group"] : []),
             ]}
             onClick={({ key }) => {
